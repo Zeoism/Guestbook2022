@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block main %}
+    <a href = '/poll/create/'>Add new voting subject</a>
+    <ol>
+        {% for xyz in poll_list %}
+          <li><a href="/poll/{{ xyz.id }}">{{ xyz.subject }}</a></li>
+        {% endfor %}
+    </ol>
+    {% endblock main %}
+    
+</body>
+</html>

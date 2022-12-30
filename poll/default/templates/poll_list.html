@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Vote cast</title>
+</head>
+<body>
+    <h1>Subjects</h1>
+    
+    {{list_poll}}/a
+    <ol>
+        {% for poll in list_poll %}
+          <li>{{poll.subject}}</li>
+        {% endfor %}
+    </ol>
+
+    <ul>
+        {% for poll in poll_list %}
+        <li>{{poll.data_created}} - <a href="{{ poll.id}}/">{{poll.subject }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
